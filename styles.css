@@ -32,7 +32,14 @@ h2:first-child {
     flex: 1 1 70%;
 }
 
-.c-history p,
-.c-soundboard p {
+.clickable {
     cursor: pointer;
+    flex: 1 1 auto;
+    background: #4a4a4a;
+    padding: 7px 15px;
+}
+
+.phrase-btn {
+    display: flex;
+    margin: 5px 0;
 }

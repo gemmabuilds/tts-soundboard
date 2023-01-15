@@ -9,6 +9,25 @@ const saved = document.getElementById('saved');
 
 let voices;
 
+function createPhraseButton(phrase) {
+  const container = document.createElement('div');
+  const textEl = document.createElement('div');
+  const delBtn  = document.createElement('button');
+
+  container.classList.add('phrase-btn');
+
+  textEl.classList.add('clickable');
+  textEl.innerText = phrase;
+  textEl.addEventListener('click', () => { sayThis(phrase) });
+  container.append(textEl);
+
+  delBtn.innerText = 'Delete';
+  delBtn.addEventListener('click', () => { container.remove(); });
+  container.append(delBtn);
+
+  return container;
+}
+
 function loadVoices() {
   voices = synth.getVoices();
   voiceSelect.innerHTML = '';
@@ -41,11 +60,8 @@ inputForm.onsubmit = (event) => {
   const inputText = inputTxt.value;
 
   sayThis(inputText);
-  
-  const p = document.createElement('p');
-  p.innerText = inputText;
-  p.addEventListener('click', () => { sayThis(inputText) });
-  history.prepend(p);
+
+  history.prepend(createPhraseButton(inputText));
 
   inputTxt.value = '';
   inputTxt.focus();
@@ -55,8 +71,5 @@ savePhraseBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const inputText = inputTxt.value;
 
-  const p = document.createElement('p');
-  p.innerText = inputText;
-  p.addEventListener('click', () => { sayThis(inputText) });
-  saved.append(p);
+  saved.append(createPhraseButton(inputText));
 });

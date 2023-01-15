@@ -72,4 +72,7 @@ savePhraseBtn.addEventListener('click', (event) => {
   const inputText = inputTxt.value;
 
   saved.append(createPhraseButton(inputText));
+
+  inputTxt.value = '';
+  inputTxt.focus();
 });

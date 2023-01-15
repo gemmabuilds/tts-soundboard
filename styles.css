@@ -24,6 +24,23 @@ h2:first-child {
     display: flex;
 }
 
+form {
+    flex: 1 1 70%;
+}
+
+label {
+    align-self: center;
+}
+
+#sayThis {
+    flex: 1 1 auto;
+    font-size: 20px;
+    background: #a1a1a1;
+    border: none;
+    padding: 6px 10px;
+    margin: 0 10px;
+}
+
 .c-history {
     flex: 1 1 30%;
 }

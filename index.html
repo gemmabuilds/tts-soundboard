@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <form class="panel">
+        <select id="voiceSelect"></select>
+        <input id="sayThis" type="text" />
+        <input id="savePhraseBtn" type="button" value="Save" />
+        <input type="submit" value="Submit" />
+    </form>
+    <div class="flex">
+        <div class="c-history panel">
+            <h2>History</h2>
+            <div id="history">
+            </div>
+        </div>
+        <div class="c-soundboard panel">
+            <div id="saved">
+                <h2>Soundboard</h2>
+            </div>
+        </div>
+    </div>
+    <script src="./tts.js"></script>
+</body>
+</html>

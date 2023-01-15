@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #666;
+    color: #fff;
+}
+
+.panel {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #a1a1a1;
+    border-radius: 6px;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.c-history {
+    flex: 1 1 30%;
+}
+
+.c-soundboard {
+    flex: 1 1 70%;
+}
+
+.c-history p,
+.c-soundboard p {
+    cursor: pointer;
+}
